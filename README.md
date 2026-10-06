@@ -2,7 +2,7 @@
 
 > An end-to-end Business Intelligence project built using **Microsoft Power BI** to transform raw e-commerce data into actionable business insights through interactive dashboards, data modeling, Power Query, and DAX.
 
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Desktop-F2C811)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
@@ -12,7 +12,7 @@
 
 Businesses generate massive amounts of transactional data every day, but raw data alone cannot support strategic decision-making.
 
-This project demonstrates the complete Business Intelligence lifecycle by transforming raw e-commerce data into six interactive dashboards that help stakeholders analyze business performance, customer behavior, product sales, operational efficiency, and overall business health.
+This project demonstrates the complete Business Intelligence lifecycle by transforming raw e-commerce data into six interactive dashboards that help stakeholders analyze business performance, customer behavior, product sales, operational efficiency, and geographic insights.
 
 The project follows industry-standard BI practices including:
 
@@ -23,14 +23,15 @@ The project follows industry-standard BI practices including:
 - DAX Measures
 - Time Intelligence
 - Interactive Dashboard Design
-- Business KPI Development
+- KPI Development
+- Business Storytelling
 
 ---
 
 # 🎯 Project Objectives
 
 - Build a scalable Business Intelligence solution using Power BI.
-- Design a proper Star Schema for efficient reporting.
+- Design a Star Schema for efficient reporting.
 - Develop reusable DAX measures for business KPIs.
 - Create executive-level dashboards for different business stakeholders.
 - Apply dashboard design best practices.
@@ -66,7 +67,7 @@ The project uses four relational datasets.
 
 # ⭐ Business Process
 
-```
+```text
 Customers
         │
         ▼
@@ -79,7 +80,7 @@ Order Items
 Products
 ```
 
-A dedicated **Calendar Table** is created for Time Intelligence and reporting.
+A dedicated **Calendar Table** is created to support Time Intelligence reporting.
 
 ---
 
@@ -87,7 +88,7 @@ A dedicated **Calendar Table** is created for Time Intelligence and reporting.
 
 The project follows a **Star Schema**.
 
-```
+```text
               Customers
                   │
                   │
@@ -95,7 +96,7 @@ The project follows a **Star Schema**.
 Calendar → Orders → Order Items ← Products
 ```
 
-Relationship Type
+### Relationship Type
 
 - One-to-Many
 - Single Direction Filtering
@@ -159,14 +160,12 @@ Completed
 
 Completed
 
-Created relationships between all tables.
-
 Implemented:
 
 - Star Schema
-- Calendar Table relationship
-- Single Direction filtering
-- Proper primary and foreign key mapping
+- Calendar Table
+- Primary & Foreign Key Relationships
+- Single Direction Filtering
 
 ---
 
@@ -176,9 +175,7 @@ Completed
 
 ### Calendar Table
 
-Created using DAX.
-
-Includes
+Created using DAX with:
 
 - Date
 - Year
@@ -187,9 +184,7 @@ Includes
 - Month Number
 - Month Year
 
-Marked as Date Table.
-
----
+Marked as the official Date Table.
 
 ### Measures Created
 
@@ -197,6 +192,7 @@ Marked as Date Table.
 
 - Total Revenue
 - Average Order Value
+- Average Revenue per Customer
 
 #### Orders
 
@@ -221,290 +217,234 @@ Marked as Date Table.
 
 ---
 
-## ✅ Sprint 4 — Executive Dashboard
+## ✅ Sprint 4 — Dashboard Development
 
 Completed
 
-Developed the Executive Dashboard featuring:
-
-### KPI Cards
-
-- Total Revenue
-- Total Orders
-- Total Customers
-- Average Order Value
-
-### Visualizations
-
-- Revenue Trend
-- Revenue by Category
-- Revenue by City
-- Orders by Status
-
-### Interactive Filters
-
-- Year
-- Category
-- City
-
-### Dashboard Features
-
-- Modern executive layout
-- Interactive filtering
-- Responsive visuals
-- Consistent theme
-- Rounded KPI cards
-- Business KPI monitoring
+Designed and developed six fully interactive dashboards using modern dashboard design principles, reusable DAX measures, responsive layouts, and interactive slicers.
 
 ---
 
 # 📊 Dashboards
 
-This project will contain **6 fully interactive dashboards**.
+This project consists of **6 fully interactive dashboards**, each designed for a different business function.
 
 ---
 
 ## 1️⃣ Executive Dashboard ✅
 
-Purpose
+### Purpose
 
 Provides a high-level overview of business performance.
 
-Includes
+### Includes
 
-- Revenue KPIs
-- Orders KPIs
-- Customer KPIs
+- Total Revenue
+- Total Orders
+- Total Customers
 - Average Order Value
 - Revenue Trend
 - Revenue by Category
 - Revenue by City
-- Order Status Analysis
-
-Status
-
-✅ Completed
+- Orders by Status
+- Interactive Year, Category & City Filters
 
 ---
 
-## 2️⃣ Sales Dashboard 🚧
+## 2️⃣ Sales Performance Dashboard ✅
 
-Purpose
+### Purpose
 
-Analyze sales performance across products and time.
+Analyze sales performance across products and categories.
 
-Planned Visuals
+### Includes
 
-- Monthly Sales
-- Sales Trend
-- Revenue by Product
+- Total Revenue
+- Total Quantity Sold
+- Total Products
+- Average Order Value
+- Monthly Sales Trend
 - Revenue by Category
-- Top Products
-- Bottom Products
-- Sales by City
-- Sales by Payment Method
-
-Status
-
-🚧 Planned
+- Top Products by Revenue
+- Orders by Status
+- Product & Category Filters
 
 ---
 
-## 3️⃣ Customer Dashboard 🚧
+## 3️⃣ Customer Insights Dashboard ✅
 
-Purpose
+### Purpose
 
-Understand customer behavior.
+Understand customer acquisition and purchasing behavior.
 
-Planned Visuals
+### Includes
 
-- Customer Growth
-- New vs Returning Customers
-- Customer Distribution
-- Customer Segmentation
-- Top Customers
-- Customer Lifetime Analysis
-
-Status
-
-🚧 Planned
-
----
-
-## 4️⃣ Product Dashboard 🚧
-
-Purpose
-
-Analyze product performance.
-
-Planned Visuals
-
-- Product Performance
-- Category Performance
-- Quantity Sold
-- Inventory Analysis
-- Top Products
-- Low Performing Products
-
-Status
-
-🚧 Planned
+- Total Customers
+- Total Orders
+- Average Revenue per Customer
+- Total Revenue
+- Customer Growth Trend
+- Customer Type Distribution
+- Revenue by Customer Type
+- Customer Distribution by City
+- Customer Filters
 
 ---
 
-## 5️⃣ Operations Dashboard 🚧
+## 4️⃣ Product Analytics Dashboard ✅
 
-Purpose
+### Purpose
+
+Evaluate product performance and inventory status.
+
+### Includes
+
+- Total Products
+- Total Quantity Sold
+- Total Revenue
+- Average Order Value
+- Top 10 Products by Revenue
+- Revenue by Category
+- Product Price Analysis
+- Stock Status Distribution
+- Product, Category & Stock Filters
+
+---
+
+## 5️⃣ Orders & Delivery Analysis Dashboard ✅
+
+### Purpose
 
 Monitor order fulfillment and operational efficiency.
 
-Planned Visuals
+### Includes
 
-- Order Status
-- Delivery Rate
-- Cancelled Orders
+- Total Orders
+- Delivered Orders
 - Returned Orders
-- Processing Trends
-- Fulfillment KPIs
-
-Status
-
-🚧 Planned
+- Delivery Rate
+- Orders by Payment Method
+- Orders by Status
+- Monthly Orders Trend
+- Revenue by Payment Method
+- Payment Method & Status Filters
 
 ---
 
-## 6️⃣ Business Insights Dashboard 🚧
+## 6️⃣ Geographic Insights Dashboard ✅
 
-Purpose
+### Purpose
 
-Provide overall business insights and executive recommendations.
+Analyze business performance across different locations.
 
-Planned Visuals
+### Includes
 
-- Business KPIs
-- Revenue Growth
-- Customer Insights
-- Product Insights
-- Forecasting
-- Key Business Recommendations
-
-Status
-
-🚧 Planned
+- Total Revenue
+- Total Customers
+- Total Orders
+- Average Revenue per Customer
+- Revenue by City
+- Customers by City
+- Revenue Trend
+- Revenue by Country / Customer Type
+- Geographic Filters
 
 ---
 
 # 📈 Key Features
 
 - Executive KPI Monitoring
-- Interactive Filtering
-- Time Intelligence
+- Six Interactive Dashboards
+- Interactive Slicers & Cross Filtering
 - Dynamic DAX Measures
-- Star Schema Data Model
+- Time Intelligence
 - Power Query Transformations
+- Star Schema Data Modeling
 - Business Performance Analysis
-- Customer Insights
-- Product Analysis
+- Customer Analytics
+- Product Analytics
+- Sales Analytics
 - Operations Monitoring
-- Executive Reporting
+- Geographic Analytics
 
 ---
 
 # 📷 Dashboard Preview
 
-Dashboard screenshots will be added after each dashboard is completed.
+Dashboard screenshots will be added after exporting the final report pages.
 
-```
+```text
 Images/
 │
 ├── executive_dashboard.png
 ├── sales_dashboard.png
 ├── customer_dashboard.png
 ├── product_dashboard.png
-├── operations_dashboard.png
-└── business_insights_dashboard.png
-```
-
----
-
-# 📁 Project Structure
-
-```
-ecommerce-powerbi-dashboard/
-│
-├── Dashboard/
-│   └── Ecommerce_BI_Dashboard.pbix
-│
-├── Dataset/
-│   ├── customers.csv
-│   ├── orders.csv
-│   ├── order_items.csv
-│   └── products.csv
-│
-├── Images/
-│
-├── README.md
-│
-├── LICENSE
-│
-└── .gitignore
+├── orders_dashboard.png
+└── geographic_dashboard.png
 ```
 
 ---
 
 # 📚 Skills Demonstrated
 
-### Power BI
+## Power BI
 
 - Dashboard Development
 - Interactive Reporting
+- Cross Filtering
 - Drill-down Analysis
-- Data Visualization
+- Business Storytelling
 
-### Power Query
+## Power Query
 
 - Data Cleaning
 - Data Transformation
 - Data Validation
+- Data Type Management
 
-### Data Modeling
+## Data Modeling
 
 - Star Schema
 - Relationships
 - Calendar Table
-- Data Optimization
+- Measure Table
+- Performance Optimization
 
-### DAX
+## DAX
 
 - Measures
 - KPIs
 - Aggregations
 - Time Intelligence
+- Business Calculations
 
-### Business Intelligence
+## Business Intelligence
 
 - Executive Reporting
 - Sales Analytics
 - Customer Analytics
 - Product Analytics
 - Operations Analytics
+- Geographic Analytics
 
 ---
 
 # 🎯 Learning Outcomes
 
-This project demonstrates practical knowledge of:
+This project demonstrates practical experience in:
 
-- Business Intelligence
-- Data Analytics
-- Dashboard Design
-- Data Modeling
-- Power Query
-- DAX
+- End-to-End Business Intelligence Development
+- Data Preparation using Power Query
+- Relational Data Modeling
+- Star Schema Design
+- DAX Measure Development
+- KPI Design
+- Dashboard Design Principles
+- Interactive Report Development
 - Time Intelligence
-- KPI Development
 - Executive Reporting
-- Business Storytelling
+- Business Storytelling with Data
 
 ---
 
@@ -512,29 +452,32 @@ This project demonstrates practical knowledge of:
 
 - Drill-through Reports
 - Custom Tooltips
-- Bookmarks & Navigation
+- Dynamic Report Navigation
+- Bookmarks
 - Mobile Layout Optimization
-- Forecasting
-- AI Visuals
-- Row-Level Security (RLS)
 - Power BI Service Deployment
+- Scheduled Data Refresh
+- AI Visuals
+- Forecasting
+- Row-Level Security (RLS)
 
 ---
 
-# 📌 Current Progress
+# 📌 Project Progress
 
 | Sprint | Status |
 |----------|--------|
-| Sprint 1 | ✅ Completed |
-| Sprint 2 | ✅ Completed |
-| Sprint 2.4 | ✅ Completed |
-| Sprint 3 | ✅ Completed |
-| Sprint 4 - Executive Dashboard | ✅ Completed |
-| Sales Dashboard | 🚧 Planned |
-| Customer Dashboard | 🚧 Planned |
-| Product Dashboard | 🚧 Planned |
-| Operations Dashboard | 🚧 Planned |
-| Business Insights Dashboard | 🚧 Planned |
+| Sprint 1 – Data Import | ✅ Completed |
+| Sprint 2 – Data Cleaning & Transformation | ✅ Completed |
+| Sprint 2.4 – Data Modeling | ✅ Completed |
+| Sprint 3 – DAX & Time Intelligence | ✅ Completed |
+| Sprint 4 – Dashboard Development | ✅ Completed |
+| Executive Dashboard | ✅ Completed |
+| Sales Performance Dashboard | ✅ Completed |
+| Customer Insights Dashboard | ✅ Completed |
+| Product Analytics Dashboard | ✅ Completed |
+| Orders & Delivery Analysis Dashboard | ✅ Completed |
+| Geographic Insights Dashboard | ✅ Completed |
 
 ---
 
@@ -544,10 +487,9 @@ This project demonstrates practical knowledge of:
 
 Computer Science (Artificial Intelligence) Graduate
 
-GitHub: https://github.com/saichetanreddy07
+**GitHub:** https://github.com/saichetanreddy07
 
-LinkedIn: *Add your LinkedIn profile here*
 
 ---
 
-## ⭐ If you found this project interesting, consider giving it a star!
+## ⭐ If you found this project helpful, consider giving it a star!
